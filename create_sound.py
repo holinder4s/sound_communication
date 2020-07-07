@@ -12,8 +12,8 @@ Ts = 1/Fs # sampling interval
 t = np.arange(0, tlen, Ts) # time array
 
 # generate signal
-sin_freq = 494 # Hz
-signal = np.sin(2*np.pi*sin_freq*t)
+sin_freq = 21000 # Hz
+signal = np.sin(2*np.pi*sin_freq*t) 
 
 # generate noise
 noise_flag = False
@@ -36,4 +36,4 @@ pylab.xlim(0, Fs/2)
 
 #save as wav file
 scaled = np.int16(signal_n/np.max(np.abs(signal_n)) * 32767)
-write('test7.wav', 44100, scaled)
+write('./test_sound/sample_sound/test_21000hz.wav', 44100, scaled)
